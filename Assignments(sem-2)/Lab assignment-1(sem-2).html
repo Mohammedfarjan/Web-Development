@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  background: #949799;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.add-event-box {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.event-card {
+  background: #e9ecef;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.event-card .delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  color: red;
+  cursor: pointer;
+}
+.my-events-box{
+ background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+</style>
+<body>
+<form>
+  <div class="container">
+    <div class="add-event-box">
+      <h2>Add New Event</h2>
+      <label for="eventTitle">Event Title:</label><br>
+      <input type="text" id="eventTitle" placeholder="Event Title"><br><br>
+      <label for="eventDate">Event Date:</label><br>
+      <input type="date" id="eventDate" placeholder="dd/mm/yyyy"><br><br>
+      <label for="eventCategory">Category:</label><br>
+      <select id="eventCategory"><br><br>
+        <option value="conference">Conference</option>
+        <option value="social">Social</option>
+        <option value="workshop">Workshop</option>
+      </select><br><br>
+      <label for="eventDescription">Description:</label><br>
+      <textarea id="eventDescription" placeholder="Description"></textarea><br>
+      <button id="addEventBtn">Add Event</button><br>
+    </div>
+
+    <div class="my-events-box">
+      <h2>My Events</h2>
+      <div class="actions">
+        <button id="clearAllBtn">Clear All Events</button>
+        <button id="addSampleBtn">Add Sample Events</button>
+      </div>
+      <div id="eventList"></div>
+    </div>
+  </div>
+  <div class="card dom-demo">
+
+</form>
+  
+  <script src="Lab assignment-1(sem-2).js"></script>
+</body>
+</html>

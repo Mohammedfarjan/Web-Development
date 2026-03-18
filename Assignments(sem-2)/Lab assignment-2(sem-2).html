@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+</head>
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1e2a78, #0f1a4f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  width: 420px;
+  background: #1c2a6c;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  color: white;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background: #ff7a18;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #ff5500;
+}
+
+/* Error */
+.error {
+  background: #ff4d4d;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Weather Card */
+.weather-card {
+  background: #ffffff;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.city-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.temp {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.condition {
+  margin-bottom: 10px;
+  color: gray;
+}
+
+/* Details */
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-box {
+  text-align: center;
+}
+
+.label {
+  font-size: 12px;
+  color: gray;
+}
+
+.value {
+  font-weight: bold;
+}
+
+/* History Section */
+.history-section {
+  margin-top: 20px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history-header h3 {
+  font-size: 16px;
+}
+
+#clearBtn {
+  background: #ff4d4d;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.history-list {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.history-list span {
+  background: #ff7a18;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+</style>
+<body>
+
+  <div class="container">
+    <h1 class="title">🌤 Weather Tracker</h1>
+    <p class="subtitle">Search any city and get live weather info</p>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <div id="errorMsg" class="error hidden">❌ City not found. Please try again.</div>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <div class="city-name" id="cityName"></div>
+      <div class="temp" id="temp"></div>
+      <div class="condition" id="condition"></div>
+      <div class="details">
+        <div class="detail-box">
+          <span class="label">Humidity</span>
+          <span id="humidity" class="value"></span>
+        </div>
+        <div class="detail-box">
+          <span class="label">Wind</span>
+          <span id="wind" class="value"></span>
+        </div>
+        <div class="detail-box">
+          <span class="label">Feels Like</span>
+          <span id="feelsLike" class="value"></span>
+        </div>
+      </div>
+    </div>
+
+    <div id="historySection" class="history-section">
+      <div class="history-header">
+        <h3>Recent Searches</h3>
+        <button id="clearBtn">Clear All</button>
+      </div>
+      <div id="historyList" class="history-list"></div>
+    </div>
+  </div>
+
+  <script src="Lab assignment-2(sem-2).js"></script>
+</body>
+</html>
