@@ -700,7 +700,8 @@
 
 // let array = [1,2,3];
 // console.log(array)
-let a = 13;
-let b = 14;
-let c = 24;
-console.log(a*b*c)
+// let a = 13;
+// let b = 14;
+// let c = 24;
+
+// console.log(a*b*c)

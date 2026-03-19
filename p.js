@@ -16,10 +16,10 @@
 
 // let data = "JavaScript is Fun!"
 // console.log(data.trim())
-let randomNum = Math.random();
-console.log(randomNum);
-console.log("hjcxghcxgjjfjdxv12345678901234567890")
-console.log("09876543210987654321")
-console.log("09876543210987654321")
-console.log("09876543210987654321")
-console.log("09876543210987654321")
+// let randomNum = Math.random();
+// console.log(randomNum);
+// console.log("hjcxghcxgjjfjdxv12345678901234567890")
+// console.log("09876543210987654321")
+// console.log("09876543210987654321")
+// console.log("09876543210987654321")
+// console.log("09876543210987654321")
