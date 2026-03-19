@@ -588,68 +588,6 @@
 // console.log(third(34))
 
 
-// const APT_KEY="https://api.openweathermap.org/data/2.5/weather?q=gurugram&appid=0133cc5316757ac730cc46ae342334e4"
-// const city=document.querySelector('#city')
-// const search=document.querySelector('#weatherform')
-// const container=document.querySelector(".info")
-// const history=document.querySelector(".searchHistory")
-// let visitedCities=[]
-
-// search.addEventListener('submit', async(e)=>{
-//     e.preventDefault()
-//     const data = city.value
-//     if(data){
-//        try{
-//            const response=await fetch('https://api.openweathermap.org/data/2.5/weather?q')
-//            const weatherData=await response.json()
-//            console.log(weatherData)
-//            console.log("City",weatherData.name)
-//            console.log("Temp",(weatherData.main.temp-273).toFixed(1),"C")
-//            console.log("Wather",weatherData.weather[0].main)
-//            console.log("Humidity",weatherData.main.humidity)
-//            console.log("Wind",weatherData.wind.speed,"miles/hrs")
-        
-//         if(weatherData.cod===200){
-//         container.innerHTML=`<h3>Weather Info</h3>
-//         <p>City: ${weatherData.name}</p>
-//         <p>Temp: ${(weatherData.main.temp-273).toFixed(1)}C</p>
-//         <p>Weather: ${weatherData.weather[0].main}</p>
-//         <p>Humidity: ${weatherData.main.humidity}</p>
-//         <p>Wind: ${weatherData.wind.speed}miles/hrs</p>`
-
-//         if(visitedCities.includes(city)){
-//           visitedCities.push(city)
-//           localStorage.setItem("visitedCities",JSON.stringify(visitedCities))
-//         }
-             
-//         }else{
-//             container.innerHTML=`<h3>Weather Info</h3>
-//             <p>${weatherData.message}</p>`
-//         }
-//         } catch(e){
-//            console.log(e)
-//          }
-//     }
-        
-// })
-
-// function showHistory(){
-//   history.innerHTML=""
-//   const cities=JSON.parse(localStorage.getItem("visitedCities"))
-//   if(cities){
-//     cities.forEach(city,()=>{
-//       const li=document.createElement("button")
-//     li.textContent=city
-//     history.appendChild("click",()=>{
-//       searchWeather(city)
-//     })
-    
-//     })
-//     history.appendChild(li)
-//   }
-//   }
-// showHistory()
-
 // console.log("hellow world")
 //  console.log("first commit")
 
@@ -705,3 +643,4 @@
 // let c = 24;
 
 // console.log(a*b*c)
+
